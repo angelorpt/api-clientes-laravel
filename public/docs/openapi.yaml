@@ -1,0 +1,311 @@
+openapi: 3.0.3
+info:
+    title: Laravel
+    description: ''
+    version: 1.0.0
+servers:
+    -
+        url: 'http://localhost'
+paths:
+    /api/clientes:
+        get:
+            summary: Listar
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: array
+                                items:
+                                    type: object
+                                example: []
+            tags:
+                - Clientes
+            security: []
+        post:
+            summary: Salvar
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Clientes
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                id:
+                                    type: integer
+                                    description: 'optional  ID do Cliente.'
+                                    example: 1
+                                nome:
+                                    type: string
+                                    description: Nome.
+                                    example: 'Maria da Silva'
+                                cpf:
+                                    type: string
+                                    description: CPF.
+                                    example: 999.999.999-99
+                                rg:
+                                    type: string
+                                    description: 'optional  RG.'
+                                    example: 1234567-8
+                                email:
+                                    type: string
+                                    description: Email.
+                                    example: joao@email.com
+                                fone1:
+                                    type: string
+                                    description: 'optional  Fone1.'
+                                    example: '(92) 9999-9999'
+                                fone2:
+                                    type: string
+                                    description: 'optional  Fone2.'
+                                    example: '(92) 8888-8888'
+                                nascimento:
+                                    type: date
+                                    description: 'optional  Nascimento.'
+                                    example: 01/01/2020
+                                sexo:
+                                    type: string
+                                    description: 'optional  Sexo.'
+                                    example: M
+                                cep:
+                                    type: string
+                                    description: CEP.
+                                    example: '01001000'
+                                rua:
+                                    type: string
+                                    description: 'optional  Rua.'
+                                    example: 'Praça da Sé'
+                                complemento:
+                                    type: string
+                                    description: 'optional  Complemento.'
+                                    example: 'lado ímpar'
+                                bairro:
+                                    type: string
+                                    description: 'optional  Bairro.'
+                                    example: Sé
+                                cidade:
+                                    type: string
+                                    description: 'optional  Cidade.'
+                                    example: 'São Paulo'
+                                uf:
+                                    type: string
+                                    description: 'optional  AM.'
+                                    example: SP
+                                ddd:
+                                    type: string
+                                    description: 'optional  DDD.'
+                                    example: '11'
+                            required:
+                                - nome
+                                - cpf
+                                - email
+                                - cep
+            security: []
+    '/api/clientes/{cliente}':
+        get:
+            summary: Consultar
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                404:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    success: false
+                                    message: 'Cliente não encontrado'
+                                properties:
+                                    success: { type: boolean, example: false }
+                                    message: { type: string, example: 'Cliente não encontrado' }
+            tags:
+                - Clientes
+            security: []
+        put:
+            summary: Atualizar
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Clientes
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                id:
+                                    type: integer
+                                    description: 'optional  ID do Cliente.'
+                                    example: 1
+                                nome:
+                                    type: string
+                                    description: Nome.
+                                    example: 'Maria da Silva'
+                                cpf:
+                                    type: string
+                                    description: CPF.
+                                    example: 999.999.999-99
+                                rg:
+                                    type: string
+                                    description: 'optional  RG.'
+                                    example: 1234567-8
+                                email:
+                                    type: string
+                                    description: Email.
+                                    example: joao@email.com
+                                fone1:
+                                    type: string
+                                    description: 'optional  Fone1.'
+                                    example: '(92) 9999-9999'
+                                fone2:
+                                    type: string
+                                    description: 'optional  Fone2.'
+                                    example: '(92) 8888-8888'
+                                nascimento:
+                                    type: date
+                                    description: 'optional  Nascimento.'
+                                    example: 01/01/2020
+                                sexo:
+                                    type: string
+                                    description: 'optional  Sexo.'
+                                    example: M
+                                cep:
+                                    type: string
+                                    description: CEP.
+                                    example: '01001000'
+                                rua:
+                                    type: string
+                                    description: 'optional  Rua.'
+                                    example: 'Praça da Sé'
+                                complemento:
+                                    type: string
+                                    description: 'optional  Complemento.'
+                                    example: 'lado ímpar'
+                                bairro:
+                                    type: string
+                                    description: 'optional  Bairro.'
+                                    example: Sé
+                                cidade:
+                                    type: string
+                                    description: 'optional  Cidade.'
+                                    example: 'São Paulo'
+                                uf:
+                                    type: string
+                                    description: 'optional  AM.'
+                                    example: SP
+                                ddd:
+                                    type: string
+                                    description: 'optional  DDD.'
+                                    example: '11'
+                            required:
+                                - nome
+                                - cpf
+                                - email
+                                - cep
+            security: []
+        delete:
+            summary: Deletar
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Clientes
+            security: []
+        parameters:
+            -
+                in: path
+                name: cliente
+                description: ''
+                example: voluptas
+                required: true
+                schema:
+                    type: string
+            -
+                in: path
+                name: id
+                description: 'ID do Cliente.'
+                example: '1'
+                required: true
+                schema:
+                    type: string

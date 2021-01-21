@@ -1,0 +1,215 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "localhost"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "a9c45857-64ff-4ccc-8445-aacbcf3f1b38",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Clientes",
+            "description": "",
+            "item": [
+                {
+                    "name": "Listar",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/clientes",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/clientes"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Salvar",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/clientes",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/clientes"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"id\": 1,\n    \"nome\": \"Maria da Silva\",\n    \"cpf\": \"999.999.999-99\",\n    \"rg\": \"1234567-8\",\n    \"email\": \"joao@email.com\",\n    \"fone1\": \"(92) 9999-9999\",\n    \"fone2\": \"(92) 8888-8888\",\n    \"nascimento\": \"01\\\/01\\\/2020\",\n    \"sexo\": \"M\",\n    \"cep\": \"01001000\",\n    \"rua\": \"Pra\\u00e7a da S\\u00e9\",\n    \"complemento\": \"lado \\u00edmpar\",\n    \"bairro\": \"S\\u00e9\",\n    \"cidade\": \"S\\u00e3o Paulo\",\n    \"uf\": \"SP\",\n    \"ddd\": \"11\"\n}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Consultar",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/clientes\/:cliente",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/clientes\/:cliente",
+                            "variable": [
+                                {
+                                    "id": "cliente",
+                                    "key": "cliente",
+                                    "value": "voluptas",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "ID do Cliente."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Atualizar",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/clientes\/:cliente",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/clientes\/:cliente",
+                            "variable": [
+                                {
+                                    "id": "cliente",
+                                    "key": "cliente",
+                                    "value": "voluptas",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "ID do Cliente."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"id\": 1,\n    \"nome\": \"Maria da Silva\",\n    \"cpf\": \"999.999.999-99\",\n    \"rg\": \"1234567-8\",\n    \"email\": \"joao@email.com\",\n    \"fone1\": \"(92) 9999-9999\",\n    \"fone2\": \"(92) 8888-8888\",\n    \"nascimento\": \"01\\\/01\\\/2020\",\n    \"sexo\": \"M\",\n    \"cep\": \"01001000\",\n    \"rua\": \"Pra\\u00e7a da S\\u00e9\",\n    \"complemento\": \"lado \\u00edmpar\",\n    \"bairro\": \"S\\u00e9\",\n    \"cidade\": \"S\\u00e3o Paulo\",\n    \"uf\": \"SP\",\n    \"ddd\": \"11\"\n}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Deletar",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/clientes\/:cliente",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/clientes\/:cliente",
+                            "variable": [
+                                {
+                                    "id": "cliente",
+                                    "key": "cliente",
+                                    "value": "est",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

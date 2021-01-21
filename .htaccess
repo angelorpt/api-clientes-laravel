@@ -1,0 +1,25 @@
+<IfModule mod_rewrite.c>
+
+	RewriteEngine on 
+	RewriteCond %{REQUEST_URI} !^/public/ 
+	RewriteCond %{REQUEST_FILENAME} !-f 
+	RewriteCond %{REQUEST_FILENAME} !-d 
+	RewriteRule ^(.*)$ /public/$1 
+	RewriteRule ^(/)?$ public/index.php [L]
+
+	# Deny access to files with extensions .ini, .psd, .log, .sh
+	<FilesMatch "\.(ini|psd|log|sh|db|sqlite)$">
+		Order allow,deny
+		Deny from all
+	</FilesMatch>
+
+	# Deny access to filenames starting with dot(.)
+	<FilesMatch "^\.">
+		Order allow,deny
+		Deny from all
+	</FilesMatch>
+
+	# Disable directory browsing 
+	Options -Indexes
+
+</IfModule>
